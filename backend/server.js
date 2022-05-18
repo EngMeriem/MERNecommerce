@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 import userRouter from './routes/userRoutes.js';
 import cors from 'cors';
 import orderRouter from './routes/orderRoutes.js';
+import uploadRouter from './routes/uploadRoutes.js';
 
 dotenv.config();
 
@@ -27,6 +28,8 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/api/keys/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
+
+app.use('/api/upload', uploadRouter);
 
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
