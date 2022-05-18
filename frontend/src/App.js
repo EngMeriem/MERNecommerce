@@ -82,7 +82,7 @@ function App() {
                 <i className="fas fa-bars"></i>
               </Button>
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                <Navbar.Brand>eforsa</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -255,8 +255,8 @@ function App() {
             </Routes>
           </Container>
         </main>
-        <footer>
-          <div className="text-center">All rights reserved</div>
+        <footer id="footer">
+          <div className="text-center py-2">&#9400; All rights reserved</div>
         </footer>
       </div>
     </BrowserRouter>
