@@ -239,7 +239,7 @@
     2. handle click action
     3. implement backen api for delete
 
-40. Review Orders
+40. Review Products
 
     1. create submit review form
     2. handle submit
