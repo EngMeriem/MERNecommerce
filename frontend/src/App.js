@@ -41,6 +41,7 @@ function App() {
   const signoutHandler = () => {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
+    localStorage.removeItem('cartItems');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
     window.location.href = '/signin';
@@ -51,9 +52,7 @@ function App() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(
-          `http://localhost:5050/api/products/categories`
-        );
+        const { data } = await axios.get(`/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err));
