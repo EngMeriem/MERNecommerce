@@ -41,6 +41,7 @@ function App() {
   const signoutHandler = () => {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
+    //remove cart items
     localStorage.removeItem('cartItems');
     localStorage.removeItem('shippingAddress');
     localStorage.removeItem('paymentMethod');
